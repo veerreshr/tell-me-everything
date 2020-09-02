@@ -1,0 +1,20 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQLite Demo</title>
+</head>
+<body>
+    <form action="" method = "POST">
+        <input type="text" name = 'username'>username
+        <input type="text" name = "post">Post
+        <input type="submit">
+    </form>
+
+    {% block content %}
+        {% for data in dataset %}
+            <h1>{{ data.name }}</h1>
+        {% endfor %}
+    {% endblock %}
+</body>
+</html>
