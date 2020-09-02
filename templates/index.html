@@ -2,19 +2,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename = 'styles.css') }}">
     <title>SQLite Demo</title>
 </head>
 <body>
-    <form action="" method = "POST">
-        <input type="text" name = 'username'>username
-        <input type="text" name = "post">Post
-        <input type="submit">
-    </form>
-
-    {% block content %}
-        {% for data in dataset %}
-            <h1>{{ data.name }}</h1>
-        {% endfor %}
-    {% endblock %}
+    <div class = "container">
+        <div class = "left">
+            <div id = "form">
+                <form action="" method = "POST">
+                    <p>username</p>
+                    <input type="text" name="name" id="name">
+                    <p>post</p>
+                    <textarea name="post" id="post" cols="30" rows="10"></textarea><br>
+                    <input type = "submit" name="submit" id="submit" value = "Post">
+                </form>
+            </div>
+        </div>
+        <div class = "right">
+            {% block content %}
+                {% for data in dataset %}
+                    {{ data.name }} says {{ data.post }}<br>
+                {% endfor %}
+            {% endblock %}
+        </div>
+    </div>
 </body>
 </html>

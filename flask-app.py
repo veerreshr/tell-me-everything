@@ -35,7 +35,7 @@ def home():
             cursor.execute('insert into data(name,post) values(?,?)',(username,post))
         con.commit()
         return redirect(url_for('home'))
-    else:
+    elif(request.method == 'GET'):
         cursor.execute('select * from data')
         fetchedData = cursor.fetchall()
         type(fetchedData)
@@ -48,6 +48,8 @@ def home():
             li.append(dictionary)
         print(li)
         return render_template("index.html",dataset=li)
+    else:
+        pass
     con.commit()
     con.close()
 
