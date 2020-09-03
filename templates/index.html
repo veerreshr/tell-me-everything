@@ -3,27 +3,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static',filename = 'styles.css') }}">
+    <style>
+        @font-face {
+            font-family: Raleway;
+            src: url('{{ url_for("static",filename = "Raleway.woff") }}') }
+    </style>
     <title>SQLite Demo</title>
 </head>
 <body>
     <div class = "container">
         <div class = "left">
+            <div class = "header">
+                <a href="https://www.github.com/ayushbasak/tell-me-everything">tell-me-everything</a>
+            </div>
             <div id = "form">
                 <form action="" method = "POST">
                     <p>username</p>
-                    <input type="text" name="name" id="name">
+                    <input type="text" name="username" id="name" required>
                     <p>post</p>
-                    <textarea name="post" id="post" cols="30" rows="10"></textarea><br>
-                    <input type = "submit" name="submit" id="submit" value = "Post">
+                    <textarea name="post" id="post" required></textarea><br>
+                    <button type = "submit" name="submit" id="submit">Post</button>
                 </form>
+            </div>
+            <div class = "footer">
+                made with ♥ by ayushbasak
             </div>
         </div>
         <div class = "right">
-            {% block content %}
-                {% for data in dataset %}
-                    {{ data.name }} says {{ data.post }}<br>
-                {% endfor %}
-            {% endblock %}
+            <div class = "content">
+                {% block content %}
+                    {% for data in dataset %}
+                        <div class = "items" >
+                                    <p>{{ data.name }}</p>{{ data.post }}<br>
+                        </div>
+                    {% endfor %}
+                {% endblock %}
+            </div>
         </div>
     </div>
 </body>

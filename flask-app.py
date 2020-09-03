@@ -4,23 +4,6 @@ app = Flask(__name__)
 
 app.config['SECRET_KEY'] = 'n9y934yiug14gi8g3g4ilg134'
 
-data = [{
-            'name':'Ayush Basak'
-        },
-        {
-            'name':'Ayush Basak'
-        },
-        {
-            'name':'Ayush Basak'
-        },
-        {
-            'name':'Ayush Basak'
-        },
-        {
-            'name':'Ayush Basak'
-        }
-]
-
 @app.route('/',methods = ['GET','POST'])
 @app.route('/home')
 def home():
@@ -46,7 +29,6 @@ def home():
             dictionary['name'] = fetchedData[i][0]
             dictionary['post'] = fetchedData[i][1]
             li.append(dictionary)
-        print(li)
         return render_template("index.html",dataset=li)
     else:
         pass
@@ -54,4 +36,4 @@ def home():
     con.close()
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host = "0.0.0.0",debug=True)

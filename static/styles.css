@@ -1,7 +1,7 @@
 html,body{
     margin:0;
-    background:rgba(50,50,50);
-    color: aliceblue;
+    background:#d4fff9;
+    font-family: Raleway;
 }
 .container{
     display: grid;
@@ -13,24 +13,101 @@ html,body{
     justify-content: center;
     align-items: center;
 }
-#form{
-    font-size: 20px;
-    padding:40px;
-    text-align: center;
-    background:rgba(100,50,50);
-    border-radius: 40px;
-    border: 2px solid white;
+.header{
+    position: fixed;
+    top:0;
+    background:rgba(50,50,50);
+    width:50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:50px;
+    box-shadow: 0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086)
+    /* 0 100px 80px rgba(0, 0, 0, 0.12); */
 }
-#form p,input{
-    margin:0;
-    margin:10px;
+.header a{
+    text-decoration: none;
+    color:white;
+}
+.header a:hover{
+    color:black;
+    background: white;
+    padding:10px;
+}
+.footer{
+    position: fixed;
+    bottom:0;
+    color:white;
+    background:rgba(50,50,50);
+    width:50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:50px;
+    box-shadow: 0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086)
+    /* 0 100px 80px rgba(0, 0, 0, 0.12); */
+}
+#form{
+    background: #65c9f7;
     padding:20px;
+    box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12)
+  ;
+  
+}
+#form input,p,textarea{
+    margin: 0%;
+    margin:20px 0px;
+    width: 100%;
+    border: none;
+}
+#form p{
+    font-size:20px;
+    color:white;
+}
+#form input{
+    padding:10px;
+}
+#submit{
+    width: 100%;
+    border: inherit;
+    color: white;
+    background: #65c9f7;;
+    border: 2px solid white;
+    cursor: pointer;
+    height:50px;
+}
+#submit:hover{
+    color:#65c9f7;
+    background:white;
 }
 
-#submit{
-    margin-top: 20px;
-}
 .right{
+    background:#dbffe7;
     border-left: 1px solid white;
     height:100vh;
+    overflow: scroll;
+}
+.content{
+    border: 2px solid black;
+    padding:20px;
+}
+.content p{
+    margin:0;
+    background:white;
+    color:black;
+    padding:5px 0px;
+}
+.items{
+    background:rgba(100,100,100);
+    color:white;
+    padding:10px;
+    margin:20px 0px;
 }
