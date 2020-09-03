@@ -60,6 +60,7 @@ html,body{
     background:white;
 }
 #form{
+    border-radius: 20px;
     width: 50%;
     background: #65c9f7;
     padding:20px;
@@ -89,6 +90,7 @@ html,body{
     border-radius:20px;
 }
 #submit{
+    border-radius: 20px;
     width: 100%;
     border: inherit;
     color: white;
