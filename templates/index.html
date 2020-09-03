@@ -21,7 +21,7 @@
                     <p>username</p>
                     <input type="text" name="username" id="name" required>
                     <p>post</p>
-                    <textarea name="post" id="post" required></textarea><br>
+                    <textarea maxlength = "{{ maxlength }}" name="post" id="post" required></textarea><br>
                     <button type = "submit" name="submit" id="submit">Post</button>
                 </form>
             </div>
@@ -30,11 +30,15 @@
             </div>
         </div>
         <div class = "right">
+            <div class = "right-header">
+                The Wall
+            </div>
             <div class = "content">
                 {% block content %}
                     {% for data in dataset %}
                         <div class = "items" >
-                                    <p>{{ data.name }}</p>{{ data.post }}<br>
+                                    <p class = "post_name">{{ data.name }}</p>
+                                    <p class = "post_data">{{ data.post }}</p><br>
                         </div>
                     {% endfor %}
                 {% endblock %}
