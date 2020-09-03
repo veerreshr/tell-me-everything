@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'about.css') }} ">
+    <title>tell-me-evrything About</title>
+    <style>
+        @font-face {
+            font-family: Raleway;
+            src: url('{{ url_for("static",filename = "Raleway.woff") }}') }
+    </style>
+</head>
+<body>
+    <div>
+        <p id = "head">About</p>
+        <p id = "text">
+            tell-me-everything is a very simple flask app for anonymous users to post
+            their thoughts on "The Wall"! <br>It uses flask as the backend framework and 
+            sqlite for database. It is currently deployed on heroku obviously! <br>
+            <br> Type in an anonymous username and speak your mind! Please don't spam, as 
+            I have not yet implemented the spam filter. Lol.
+        </p>
+        <a href="/">Home</a>
+    </div>
+</body>
+</html>

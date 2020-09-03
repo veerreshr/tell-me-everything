@@ -2,18 +2,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ url_for('static',filename = 'icon.ico') }}" type = "image/ico" sizes = "16x16">
     <link rel="stylesheet" href="{{ url_for('static',filename = 'styles.css') }}">
     <style>
         @font-face {
             font-family: Raleway;
             src: url('{{ url_for("static",filename = "Raleway.woff") }}') }
     </style>
-    <title>SQLite Demo</title>
+    <title>tell-me-everything</title>
 </head>
 <body>
     <div class = "container">
         <div class = "left">
             <div class = "header">
+                <img src="{{ url_for('static',filename = 'icon.ico') }}" alt="." width="16px">
                 <a href="https://www.github.com/ayushbasak/tell-me-everything">tell-me-everything</a>
             </div>
             <div id = "form">
@@ -26,7 +28,16 @@
                 </form>
             </div>
             <div class = "footer">
-                made with ♥ by ayushbasak
+                <div>
+                    <a href="/about">About</a>
+                </div>
+                <div>
+                    made with ♥ by <a href="https://www.github.com/ayushbasak">ayushbasak</a> 
+                </div>
+                <div>
+
+                </div>
+                
             </div>
         </div>
         <div class = "right">

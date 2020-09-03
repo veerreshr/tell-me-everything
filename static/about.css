@@ -1,0 +1,40 @@
+html,body{
+    margin:0;
+    font-family: Raleway;
+}
+div{
+    background:rgba(50,50,50);
+    height:100vh;
+    color:white;
+    text-align: center;
+    overflow-wrap: break-word;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#head{
+    margin:0;
+    width: 50vw;
+    background:black;
+    padding:20px;
+}
+#text{
+    margin:0;
+    width:50vw;
+    background:rgba(40,40,40);
+    padding:20px;
+}
+a {
+    text-decoration:0;
+    color:white;
+    background:rgba(50,50,50);
+    width:50vw;
+    padding:20px;
+    cursor: pointer;
+    border: 2px solid white;
+}
+a:hover{
+    color:black;
+    background:rgba(250,250,250);
+}
