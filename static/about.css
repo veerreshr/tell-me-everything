@@ -2,8 +2,14 @@ html,body{
     margin:0;
     font-family: Raleway;
 }
+#myVideo{
+    width:100%;
+    position: fixed;
+    top:0;
+    z-index: -1;
+}
 div{
-    background:rgba(50,50,50);
+    /* background:rgba(50,50,50); */
     height:100vh;
     color:white;
     text-align: center;
@@ -16,19 +22,19 @@ div{
 #head{
     margin:0;
     width: 50vw;
-    background:black;
+    background:rgba(0,0,0,0.7);
     padding:20px;
 }
 #text{
     margin:0;
     width:50vw;
-    background:rgba(40,40,40);
+    background:rgba(40,40,40,0.7);
     padding:20px;
 }
 a {
     text-decoration:0;
     color:white;
-    background:rgba(50,50,50);
+    background:rgba(0,0,0,0.3);
     width:50vw;
     padding:20px;
     cursor: pointer;
