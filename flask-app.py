@@ -23,7 +23,7 @@ def home():
         fetchedData = cursor.fetchall()
         type(fetchedData)
         li = []
-        for i in range(1,len(fetchedData)):
+        for i in range(0,len(fetchedData)):
             print(i)
             dictionary = {}
             dictionary['name'] = fetchedData[i][0]
