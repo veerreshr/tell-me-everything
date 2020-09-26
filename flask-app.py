@@ -29,7 +29,7 @@ def home():
             dictionary['name'] = fetchedData[i][0]
             dictionary['post'] = fetchedData[i][1]
             li.append(dictionary)
-        return render_template("index.html",dataset=li,maxlength = 240)
+        return render_template("index-min.html",dataset=li,maxlength = 240)
     else:
         pass
     con.commit()
@@ -37,7 +37,7 @@ def home():
 
 @app.route('/about')
 def about():
-    return render_template('about.html')
+    return render_template('about-min.html')
 
 if __name__ == '__main__':
     app.run(host = "0.0.0.0",debug=True)
