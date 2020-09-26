@@ -29,7 +29,7 @@ def home():
             dictionary['name'] = fetchedData[i][0]
             dictionary['post'] = fetchedData[i][1]
             li.append(dictionary)
-        return render_template("index-about.html",dataset=li,maxlength = 240)
+        return render_template("index-min.html",dataset=li,maxlength = 240)
     else:
         pass
     con.commit()
